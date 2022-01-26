@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678a2b13176a473297259eee0619d24b, type: 3}
+  m_Name: TelekinesisAbilityAsset
+  m_EditorClassIdentifier: 
+  entryID: 5
+  settings:
+    priority: 0
+    predictTime: 0
+    castTime: 0
+    cooldown: 0
+    castRange: 0
+    type: 2097152
+  castAudio:
+    startCast: {fileID: 0}
+    loopCast: {fileID: 0}
+    endCast: {fileID: 0}
+    successCast: {fileID: 0}
+  castChargeEffect: {fileID: 0}
+  vibration:
+    startCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+    loopCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+    endCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+  input: 3
+  telekinesisSettings:
+    pullScale: 20
+    minDist: 0.03
+    maxDist: 10
+    maximumVelocityInPoint: 1
+    rangeMaxVelocityMultiplier: 7
+    adjustVelocityMultiplier: 3
+    constantPull: 0.1
+    throwPower: 10
+    targetThrowPower: 15
+    verticalCorrection: 0.001
+    grabDistance: 0.31

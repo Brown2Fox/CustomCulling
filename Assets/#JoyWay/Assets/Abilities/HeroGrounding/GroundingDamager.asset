@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec153016e776e184eafd948a0451ccf9, type: 3}
+  m_Name: GroundingDamager
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4315783330951411082, guid: fa8bd4b44c5f2bd448fcb69b69781e81, type: 3}
+  trailPrefab: {fileID: 0}
+  settings:
+    speed: 0
+    radius: 4
+    impulse: 300
+    damage: 50
+    lifetime: 6
+    knockDownForce: 50
+    type: 2049
+    durability:
+      value: 0
+      currentValue: 0
+      botHitLoss: 0
+      wallHitLoss: 0

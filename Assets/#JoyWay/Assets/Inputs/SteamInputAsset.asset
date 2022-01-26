@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12c75d8f1ca49aab3b4ed7fa1adff0c, type: 3}
+  m_Name: SteamInputAsset
+  m_EditorClassIdentifier: 
+  abilityInputs:
+  - abilityButton: 2
+    steamAction:
+      actionPath: /actions/gemAbilities/in/Primary
+      needsReinit: 0
+  - abilityButton: 4
+    steamAction:
+      actionPath: /actions/gemAbilities/in/Primary
+      needsReinit: 0
+  - abilityButton: 32
+    steamAction:
+      actionPath: /actions/gemAbilities/in/Secondary
+      needsReinit: 0
+  - abilityButton: 64
+    steamAction:
+      actionPath: /actions/gemAbilities/in/Secondary
+      needsReinit: 0
+  - abilityButton: 1048576
+    steamAction:
+      actionPath: /actions/default/in/Grab
+      needsReinit: 0
+  - abilityButton: 2097152
+    steamAction:
+      actionPath: /actions/default/in/Grab
+      needsReinit: 0
+  - abilityButton: 4194304
+    steamAction:
+      actionPath: /actions/default/in/Grab
+      needsReinit: 0
+  - abilityButton: 2097153
+    steamAction:
+      actionPath: /actions/default/in/Shoot
+      needsReinit: 0
+  - abilityButton: 2048
+    steamAction:
+      actionPath: /actions/locomotion/in/Dash
+      needsReinit: 0
+  - abilityButton: 1048577
+    steamAction:
+      actionPath: /actions/default/in/Shoot
+      needsReinit: 0

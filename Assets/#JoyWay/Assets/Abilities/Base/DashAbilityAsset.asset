@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143e159a4ab04e049bb752d8ba8334b8, type: 3}
+  m_Name: DashAbilityAsset
+  m_EditorClassIdentifier: 
+  entryID: 1
+  settings:
+    priority: 0
+    predictTime: 0
+    castTime: 0
+    cooldown: 0
+    castRange: 0
+    type: 2048
+  castAudio:
+    startCast: {fileID: 0}
+    loopCast: {fileID: 0}
+    endCast: {fileID: 0}
+    successCast: {fileID: 11400000, guid: 99f79d73c4d0cdb40ab181f853e84ad1, type: 2}
+  castChargeEffect: {fileID: 0}
+  vibration:
+    startCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+    loopCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+    endCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+  input: 2
+  DashSettings:
+    baseCount: 1
+    velocityBounds: {x: 0.5, y: 1.65}
+    detectionRadius: 0.15
+    dropRadius: 0.02
+    detectionTime: 0.2
+    detectionVelocityMultiplier: 2.5
+    dashVelocityBounds: {x: 6, y: 6}
+    dashTimeBounds: {x: 0.05, y: 0.08}
+    exitVelocity: 7
+    jumpImpact: 0.6

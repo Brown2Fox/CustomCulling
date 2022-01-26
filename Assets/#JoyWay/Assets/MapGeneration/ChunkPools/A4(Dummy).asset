@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e6ab2273a941d49a9ee1d2cb6037db, type: 3}
+  m_Name: A4(Dummy)
+  m_EditorClassIdentifier: 
+  roomType: 5
+  size: {x: 4, y: 4}
+  variants:
+  - roomType: 5
+    roomScene: {fileID: 102900000, guid: 1e136fa5868bbe34b90c8605db025ddb, type: 3}
+    roomSceneName: Assets/#JoyWay/Scenes/ChunksScenes/A4/A4.4.01.unity
+    size: {x: 4, y: 4}
+    ways:
+    - offsetFrom: {x: 1, y: 0}
+      offsetTo: {x: 1, y: -1}
+    - offsetFrom: {x: 2, y: 0}
+      offsetTo: {x: 2, y: -1}
+    - offsetFrom: {x: 1, y: 3}
+      offsetTo: {x: 1, y: 4}
+    - offsetFrom: {x: 2, y: 3}
+      offsetTo: {x: 2, y: 4}
+    modelRotation: 0
+  - roomType: 5
+    roomScene: {fileID: 102900000, guid: 1d85e25c2ac70b54ab4db97f3a30eb82, type: 3}
+    roomSceneName: Assets/#JoyWay/Scenes/ChunksScenes/A4/A4.4.02.unity
+    size: {x: 4, y: 4}
+    ways:
+    - offsetFrom: {x: 1, y: 0}
+      offsetTo: {x: 1, y: -1}
+    - offsetFrom: {x: 2, y: 0}
+      offsetTo: {x: 2, y: -1}
+    - offsetFrom: {x: 0, y: 3}
+      offsetTo: {x: -1, y: 3}
+    - offsetFrom: {x: 3, y: 3}
+      offsetTo: {x: 4, y: 3}
+    modelRotation: 0
+  - roomType: 5
+    roomScene: {fileID: 102900000, guid: ec0bc3db3fb2009408cdbb7f25da0f43, type: 3}
+    roomSceneName: Assets/#JoyWay/Scenes/ChunksScenes/A4/A4.4.03.unity
+    size: {x: 4, y: 4}
+    ways:
+    - offsetFrom: {x: 0, y: 0}
+      offsetTo: {x: 0, y: -1}
+    - offsetFrom: {x: 3, y: 0}
+      offsetTo: {x: 3, y: -1}
+    modelRotation: 0

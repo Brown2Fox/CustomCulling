@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1734155265485172855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734155265485172853}
+  - component: {fileID: 1734155265485172854}
+  - component: {fileID: 1734155265485172852}
+  - component: {fileID: 1734155265485172851}
+  - component: {fileID: 1734155265485172850}
+  m_Layer: 0
+  m_Name: LongGeneration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734155265485172853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734155265485172855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734155265485172854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734155265485172855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f573e9826e6bcdd4b9df6b48383d9b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoGenerateOnLoad: 1
+  seed: -1748626771
+  randomSeed: 1
+  autoNavmesh: 1
+  mapRoot: {fileID: 0}
+  background: {fileID: 1378326947162726652, guid: 328ba3a9c5c30a844a4acb09fbe14fa3,
+    type: 3}
+  navMeshSurface: {fileID: 1734155265485172852}
+  mapSize: {x: 20, y: 20}
+  generated: []
+  openPoints: []
+  mapAsset: {fileID: 11400000, guid: dbe084410df38bc4395c448082df3e99, type: 2}
+  statisticsRange: 1
+  start:
+    rooms: {fileID: 11400000, guid: 5d9c92da0ac84fb4194444c243290755, type: 2}
+    min: {x: 10, y: 0}
+    max: {x: 10, y: 0}
+    rotation: 0
+  finish:
+    rooms: {fileID: 11400000, guid: 6a76ad613b924db48979248c7ba80220, type: 2}
+    min: {x: 6, y: 17}
+    max: {x: 13, y: 17}
+    rotation: 2
+  interestPoints: 5
+  windowWidth: 2
+  battleRoom: {fileID: 11400000, guid: 0ca2ff46a7fc8a34e9c80a9cb4a7420e, type: 2}
+  arenaRoom: {fileID: 11400000, guid: 0ca2ff46a7fc8a34e9c80a9cb4a7420e, type: 2}
+  pointsSpawnZoneSize: {x: 12, y: 12}
+  fillersAssets:
+  - {fileID: 11400000, guid: 5ee010b0a13476f409fa8c52ec95bb5a, type: 2}
+  - {fileID: 11400000, guid: fce4f0dffe3daf24a91cb3c806ddb544, type: 2}
+  - {fileID: 11400000, guid: 0a05d2a8e5429a844824e13652a44bd8, type: 2}
+  d_OpenPoint: {fileID: 538270796269251647, guid: 7d028c340df5b084dae021b16fe7d496,
+    type: 3}
+--- !u!114 &1734155265485172852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734155265485172855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df27b9289d1e8c4fb82e0df4f4673ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 3221225472
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 1
+  m_VoxelSize: 0.04
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &1734155265485172851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734155265485172855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cda0d8a183b70946a2e21fa3967e3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpcStart: 0.35
+  bpcFinish: 0.85
+  corridorsBotsTiers:
+  - {fileID: 11400000, guid: 073d67ce51ab2074781942379df6394b, type: 2}
+  - {fileID: 11400000, guid: 7a0af7939c04b194f901ea93040328bf, type: 2}
+  - {fileID: 11400000, guid: c2d08657075c3a24ab0d32e2a4766efb, type: 2}
+  - {fileID: 11400000, guid: 853580bf131d19d43a0607d75fb739fe, type: 2}
+  corridorsBotsLevels:
+  - 0
+  - 0.1
+  - 0.3
+  - 0.5
+  arenasBotsTiers:
+  - {fileID: 11400000, guid: 3bd2f950823d95443a35d35696e7b4c8, type: 2}
+  - {fileID: 11400000, guid: ef2075e656a574d4fb4b688dc4cad735, type: 2}
+  - {fileID: 11400000, guid: c3b15ecf71c357c4e96a3233330c9c26, type: 2}
+  - {fileID: 11400000, guid: 85415617e15c2b3468ce0d998f7d84e9, type: 2}
+  arenasBotsLevels:
+  - 0
+  - 0.2
+  - 0.4
+  - 0.6
+--- !u!114 &1734155265485172850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734155265485172855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673082f70b38e794eb89217a552f442c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainGifts: {fileID: 11400000, guid: 0d226df2689f87a499900dfeca3ffac9, type: 2}
+  subGifts: {fileID: 11400000, guid: b7621243ac89d0e4ebc02f2dabe67cc3, type: 2}
+  shopGoods: {fileID: 11400000, guid: d17e8476f83541444badad21ca6c969a, type: 2}
+  globalMinRestrictions: {fileID: 11400000, guid: eecbc78aaccb2cd44a9425d799e801a4,
+    type: 2}
+  globalMaxRestrictions: {fileID: 11400000, guid: f7a3bfd2507b7304eae5e42b1b5a2788,
+    type: 2}
+  subGiftsCount: 7
+  shopsCount: 3
+  defaultBattleGift: {fileID: 5709427244882912953, guid: 8af7b4965cdd74649a73c2e32180d98a,
+    type: 3}
+  mainRooms: []
+  subRooms: []
+  giftsRooms: []
+  shopsRooms: []

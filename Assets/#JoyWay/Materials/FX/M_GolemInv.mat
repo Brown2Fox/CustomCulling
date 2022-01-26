@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_GolemInv
+  m_Shader: {fileID: -6465566751694194690, guid: 2d31887f98f514a439cec593cb854e47,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_CB5626FF_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 2140d5caeca76404cadd35cc48f45f10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_9AD0C5DF_Out_0:
+        m_Texture: {fileID: 2800000, guid: 2140d5caeca76404cadd35cc48f45f10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _noise:
+        m_Texture: {fileID: 2800000, guid: 2140d5caeca76404cadd35cc48f45f10, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _dissolve: 0.25
+    - _dissolveWidth: 0.075
+    - _noiseStrength: 1
+    - _noiseTime: 0.02
+    m_Colors:
+    - Color_16A8A4D0: {r: 0.24852276, g: 1, b: 0, a: 1}
+    - Color_3A24B250: {r: 1, g: 0, b: 0, a: 0}
+    - _border: {r: 4.376057, g: 0.07293429, b: 0, a: 1}
+    - _color1: {r: 0.023153365, g: 0.009721218, b: 0.008023192, a: 1}
+    - _color2: {r: 0.04, g: 0.0026666666, b: 0, a: 1}
+  m_BuildTextureStacks: []

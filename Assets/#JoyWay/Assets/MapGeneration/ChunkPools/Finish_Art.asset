@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e6ab2273a941d49a9ee1d2cb6037db, type: 3}
+  m_Name: Finish_Art
+  m_EditorClassIdentifier: 
+  roomType: 6
+  size: {x: 3, y: 3}
+  variants:
+  - roomType: 6
+    roomScene: {fileID: 102900000, guid: d7a8f8e985c138248925bd298437b164, type: 3}
+    roomSceneName: Assets/#JoyWay/Scenes/ChunksScenes_art/B3/B3.6_art.unity
+    size: {x: 3, y: 3}
+    ways:
+    - offsetFrom: {x: 1, y: 0}
+      offsetTo: {x: 1, y: -1}
+    modelRotation: 0

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa14485e9b547cba425c638cdda277a, type: 3}
+  m_Name: ClimbAbilityAsset
+  m_EditorClassIdentifier: 
+  entryID: 0
+  settings:
+    priority: 0
+    predictTime: 1
+    castTime: 0
+    cooldown: 0
+    castRange: 0
+    type: 4194304
+  castAudio:
+    startCast: {fileID: 0}
+    loopCast: {fileID: 0}
+    endCast: {fileID: 0}
+    successCast: {fileID: 11400000, guid: 717b69d1e5365a643928e4c5399f01e0, type: 2}
+  castChargeEffect: {fileID: 0}
+  vibration:
+    startCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+    loopCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+    endCast:
+      amplitude: 0
+      frequency: 0
+      duration: 0
+      delay: 0
+  input: 4
+  dashVelocityMultiplier: 1.5
+  dashVelocityMax: 7

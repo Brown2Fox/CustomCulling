@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_FakePBR_Hand
+  m_Shader: {fileID: -6465566751694194690, guid: 9c41f711cf8be544aae3e99b274b25cd,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Cubemap_45FF04CA:
+        m_Texture: {fileID: 8900000, guid: 4586e4b075789284fbbec0f000bf460b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Cubemap_B6DFCD09:
+        m_Texture: {fileID: 8900000, guid: 7bb8a397a110dc949acc3181ca11a91f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_852912E0:
+        m_Texture: {fileID: 2800000, guid: 22ac481b4cdc4054db5f5f6efd404643, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_96CDFAAA:
+        m_Texture: {fileID: 2800000, guid: c76d182a49763d040853f61b91b89079, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ARM:
+        m_Texture: {fileID: 2800000, guid: 3301aaced92389d44be5406ca1da266f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _color:
+        m_Texture: {fileID: 2800000, guid: eb287fa2e037b45488b5fc75be43c3c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal:
+        m_Texture: {fileID: 2800000, guid: 34bfd4e5b8750c0428c5a96ab550994c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _reflection:
+        m_Texture: {fileID: 8900000, guid: da306e7aaee21e94b8d8e7128cc2b5a6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - ENUM_3709CE4F: 0
+    - Vector1_11C6F997: 8.5
+    - Vector1_5333190F: 0
+    - Vector1_65A0CE02: 0
+    - Vector1_7F013624: 0.005
+    - Vector1_8CDA0A5B: 4.47
+    - Vector1_9B393D50: 1
+    - Vector1_B1805ED7: 0
+    - Vector1_E0C12F27: 1
+    - Vector1_F02D3FBF: 0.25
+    - Vector1_FD04AE6A: 1
+    - _baseLightBlur: 10
+    - _maxRoughtness: 3.5
+    m_Colors:
+    - Color_5CB3EF91: {r: 0.75, g: 0.75, b: 0.75, a: 0}
+    - Color_66DB570A: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 0}
+    - _colorTint: {r: 5.0387836, g: 5.0387836, b: 5.0387836, a: 0}

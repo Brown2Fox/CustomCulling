@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a41a7eeffac75409307beadf1f72a4, type: 3}
+  m_Name: SettingsAsset
+  m_EditorClassIdentifier: 
+  serializable:
+    version: 1.0.1
+    input:
+      turnType: 1
+      snapTurnDegrees: 2
+      smoothTurnSpeed: 0
+      mainHand: 2
+      longHolds: 0
+    calibration:
+      auto: 0
+      height: 178
+    configs:
+      friendlyFire: 0
+      damageNumbers: 0
+      impactPoints: 0
+    audio:
+      masterVolume: 0
+      ambientVolume: 0
+      speechVolume: 0
+      effectsVolume: 0
+    introCHK: -1
+    tutors:
+      mainPartCompleted: 0
+      localTutors: 
+    upgrades:
+      upgrades: 
+    stats:
+      boss:
+        spawned: 0
+        phase_2: 0
+        kills: 0
+      enemy:
+        totalEnemiesKilled: 0
+        enemies:
+          m_Keys: []
+          m_Values: []
+      items:
+        pedestals: 0
+        entries:
+          m_Keys: []
+          m_Values: []
+    currency:
+      coins:
+        amount: 0
+      darkMatter:
+        amount: 0
+    showAllStats_developers: 0
+  path: C:/Users/VR/AppData/LocalLow/JoyWay/Outlier/settings/save.save
+  saveName: save.save
