@@ -20,6 +20,7 @@ public class RotateFromInput : MonoBehaviour {
 
 	private void OnEnable() {
 		OpenXRInput.wrapper.PlayerControls.Rotate.performed += RotateCheck;
+		OpenXRInput.wrapper.PlayerControls.Rotate.canceled += RotateCheck;
 	}
 
 	private void RotateCheck(InputAction.CallbackContext _context) {
