@@ -63,7 +63,7 @@ public class Minimap : Singleton<Minimap>
 	public float speedMove		= 1;
 
 	[Header("Image")]
-	public int scaleFactor		= 1;                  // Для отрисовки карты, чем он больше, тем четче картинка
+	public int scaleFactor		= 1;                  // Р”Р»СЏ РѕС‚СЂРёСЃРѕРІРєРё РєР°СЂС‚С‹, С‡РµРј РѕРЅ Р±РѕР»СЊС€Рµ, С‚РµРј С‡РµС‚С‡Рµ РєР°СЂС‚РёРЅРєР°
 
 	Texture2D texture;
 	Color[] clean_colours_array;
@@ -95,7 +95,7 @@ public class Minimap : Singleton<Minimap>
 		public Texture2D source;
 		public float angleChank;
 
-		// Проверяем находятся ли координаты в пределах комнаты
+		// РџСЂРѕРІРµСЂСЏРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р»Рё РєРѕРѕСЂРґРёРЅР°С‚С‹ РІ РїСЂРµРґРµР»Р°С… РєРѕРјРЅР°С‚С‹
 		public bool CheckContain(Vector2 pos) {
 
 			Vector2 chankPos = new Vector2(room.transform.position.x, room.transform.position.z);
@@ -141,14 +141,14 @@ public class Minimap : Singleton<Minimap>
 		LevelManager.SoonLoading += Reset;
 	}
 
-	// Инициализация карты
+	// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєР°СЂС‚С‹
 	public void Proccess() {
 		ClearMap();
 		Apply();
 
 		minimapElements = new List<MinimapElement>();
 
-		// Находим самые отрицательные координаты
+		// РќР°С…РѕРґРёРј СЃР°РјС‹Рµ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹
 		Vector2 lowest = new Vector2(mapGenerator.generated[0].onScene.transform.localPosition.x - ((mapGenerator.generated[0].onScene.roomData.size.x * 16) / 2),
 										mapGenerator.generated[0].onScene.transform.localPosition.z - ((mapGenerator.generated[0].onScene.roomData.size.y * 16) / 2));
 
@@ -168,7 +168,7 @@ public class Minimap : Singleton<Minimap>
 
 			MinimapElement me = new MinimapElement();
 
-			// Задаем его размер, положение и поворот
+			// Р—Р°РґР°РµРј РµРіРѕ СЂР°Р·РјРµСЂ, РїРѕР»РѕР¶РµРЅРёРµ Рё РїРѕРІРѕСЂРѕС‚
 			me.sizePixelPic = room.onScene.roomData.size * 16;
 			me.angleChank = new Vector3(0, 0, (360 - room.onScene.transform.eulerAngles.y) + 90).z;
 			me.posPixelPic = new Vector2(room.onScene.transform.localPosition.x, room.onScene.transform.localPosition.z);
@@ -184,7 +184,7 @@ public class Minimap : Singleton<Minimap>
 
 			me.OpenChank(false);
 
-			// Добавляем в список сгенеренных кусков карты
+			// Р”РѕР±Р°РІР»СЏРµРј РІ СЃРїРёСЃРѕРє СЃРіРµРЅРµСЂРµРЅРЅС‹С… РєСѓСЃРєРѕРІ РєР°СЂС‚С‹
 			minimapElements.Add(me);
 		}
 
@@ -206,7 +206,7 @@ public class Minimap : Singleton<Minimap>
 		CheckHandPos();
 	}
 
-	// Отслеживаем положение руки чтобы скрывать/открывать карту
+	// РћС‚СЃР»РµР¶РёРІР°РµРј РїРѕР»РѕР¶РµРЅРёРµ СЂСѓРєРё С‡С‚РѕР±С‹ СЃРєСЂС‹РІР°С‚СЊ/РѕС‚РєСЂС‹РІР°С‚СЊ РєР°СЂС‚Сѓ
 	private void CheckHandPos() {
 		if (Vector3.Angle(player.leftHand.transform.right, Vector3.up) < 60) {
 			holder.gameObject.SetActive(true);
@@ -217,7 +217,7 @@ public class Minimap : Singleton<Minimap>
 
 
 
-	// Отслеживаем какие чанки должны открыться 
+	// РћС‚СЃР»РµР¶РёРІР°РµРј РєР°РєРёРµ С‡Р°РЅРєРё РґРѕР»Р¶РЅС‹ РѕС‚РєСЂС‹С‚СЊСЃСЏ 
 	private void CheckTruePos() {
 
 		for (int i = 0; i < minimapElements.Count; i++) {
@@ -248,15 +248,15 @@ public class Minimap : Singleton<Minimap>
 
 	}
 
-	// Проверяем соседние чанки
+	// РџСЂРѕРІРµСЂСЏРµРј СЃРѕСЃРµРґРЅРёРµ С‡Р°РЅРєРё
 	private void CheckNearChanks(RoomController chank) {
 		List<Vector2> nearestCoords = new List<Vector2>();
 		foreach (WayConnection one in chank.roomData.ways) {
 			Vector2 from = (one.offsetFrom * 8);
-			from.x += chank.transform.position.x - ((chank.roomData.size.x - 1) * 8);       // Отсчет идет от левого нижнего квадрата комнаты (если её размер больше 1),
-			from.y += chank.transform.position.z - ((chank.roomData.size.y - 1) * 8);       //  если она 1 то от этой самой комнаты
+			from.x += chank.transform.position.x - ((chank.roomData.size.x - 1) * 8);       // РћС‚СЃС‡РµС‚ РёРґРµС‚ РѕС‚ Р»РµРІРѕРіРѕ РЅРёР¶РЅРµРіРѕ РєРІР°РґСЂР°С‚Р° РєРѕРјРЅР°С‚С‹ (РµСЃР»Рё РµС‘ СЂР°Р·РјРµСЂ Р±РѕР»СЊС€Рµ 1),
+			from.y += chank.transform.position.z - ((chank.roomData.size.y - 1) * 8);       //  РµСЃР»Рё РѕРЅР° 1 С‚Рѕ РѕС‚ СЌС‚РѕР№ СЃР°РјРѕР№ РєРѕРјРЅР°С‚С‹
 
-			Vector2 to = (one.offsetTo * 16);               // Нам нужен двойной чтобы было не на границе чанков а в глубь следующего
+			Vector2 to = (one.offsetTo * 16);               // РќР°Рј РЅСѓР¶РµРЅ РґРІРѕР№РЅРѕР№ С‡С‚РѕР±С‹ Р±С‹Р»Рѕ РЅРµ РЅР° РіСЂР°РЅРёС†Рµ С‡Р°РЅРєРѕРІ Р° РІ РіР»СѓР±СЊ СЃР»РµРґСѓСЋС‰РµРіРѕ
 			nearestCoords.Add(from + to);
 		}
 
@@ -277,7 +277,7 @@ public class Minimap : Singleton<Minimap>
 
 	}
 
-	// Открыть полную карту
+	// РћС‚РєСЂС‹С‚СЊ РїРѕР»РЅСѓСЋ РєР°СЂС‚Сѓ
 	public void OpenFullMap(bool val) {
 		for (int i = 0; i < minimapElements.Count; i++) {
 			if (minimapElements[i].open != val) {
@@ -293,7 +293,7 @@ public class Minimap : Singleton<Minimap>
 	}
 
 
-	// Рассчитываем новое положение миникарты (она центрируется учитывая открытые чанки)
+	// Р Р°СЃСЃС‡РёС‚С‹РІР°РµРј РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ РјРёРЅРёРєР°СЂС‚С‹ (РѕРЅР° С†РµРЅС‚СЂРёСЂСѓРµС‚СЃСЏ СѓС‡РёС‚С‹РІР°СЏ РѕС‚РєСЂС‹С‚С‹Рµ С‡Р°РЅРєРё)
 	private void RecalcHolderPosNew() {
 
 
@@ -312,7 +312,7 @@ public class Minimap : Singleton<Minimap>
 		holder.position += holderTargetMove * Time.unscaledDeltaTime;
 	}
 
-	// Рассчитываем новый скейл миникарты
+	// Р Р°СЃСЃС‡РёС‚С‹РІР°РµРј РЅРѕРІС‹Р№ СЃРєРµР№Р» РјРёРЅРёРєР°СЂС‚С‹
 	private void RecalcHolderScale() {
 
 		float maxDeltaX = 0;
@@ -346,7 +346,7 @@ public class Minimap : Singleton<Minimap>
 
 	}
 
-	// Отслеживаем положение игрока на карте и двигаем/вращаем его курсор
+	// РћС‚СЃР»РµР¶РёРІР°РµРј РїРѕР»РѕР¶РµРЅРёРµ РёРіСЂРѕРєР° РЅР° РєР°СЂС‚Рµ Рё РґРІРёРіР°РµРј/РІСЂР°С‰Р°РµРј РµРіРѕ РєСѓСЂСЃРѕСЂ
 	private void PlayerPosition() {
 		float halfW = spriteRen.sprite.texture.width / 2;
 		float halfH = spriteRen.sprite.texture.height / 2;
@@ -374,20 +374,20 @@ public class Minimap : Singleton<Minimap>
 
 	}
 
-	// Рисует на текстуре чанк
+	// Р РёСЃСѓРµС‚ РЅР° С‚РµРєСЃС‚СѓСЂРµ С‡Р°РЅРє
 	private void DrawImageNew(MinimapElement me) {
 
-		// Рассчитываем шаг с которым будем брать цвет пикселя у оригинальной картинки
+		// Р Р°СЃСЃС‡РёС‚С‹РІР°РµРј С€Р°Рі СЃ РєРѕС‚РѕСЂС‹Рј Р±СѓРґРµРј Р±СЂР°С‚СЊ С†РІРµС‚ РїРёРєСЃРµР»СЏ Сѓ РѕСЂРёРіРёРЅР°Р»СЊРЅРѕР№ РєР°СЂС‚РёРЅРєРё
 		int difW = (int)(me.source.width / (me.sizePixelPic.x * scaleFactor));
 		int difH = (int)(me.source.height / (me.sizePixelPic.y * scaleFactor));
 
-		// левый нижний угол данного чанка		Его положение +	Самый отрицательный поо кориданатм ибо у текстуры нет отрицательной плоскости - половина его ширины/высоты
+		// Р»РµРІС‹Р№ РЅРёР¶РЅРёР№ СѓРіРѕР» РґР°РЅРЅРѕРіРѕ С‡Р°РЅРєР°		Р•РіРѕ РїРѕР»РѕР¶РµРЅРёРµ +	РЎР°РјС‹Р№ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Р№ РїРѕРѕ РєРѕСЂРёРґР°РЅР°С‚Рј РёР±Рѕ Сѓ С‚РµРєСЃС‚СѓСЂС‹ РЅРµС‚ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№ РїР»РѕСЃРєРѕСЃС‚Рё - РїРѕР»РѕРІРёРЅР° РµРіРѕ С€РёСЂРёРЅС‹/РІС‹СЃРѕС‚С‹
 		Vector2 leftBot = new Vector2((me.posPixelPic.x + Mathf.Abs(me.lowest.x) - (me.sizePixelPic.x / 2)),
 									  (me.posPixelPic.y + Mathf.Abs(me.lowest.y) - (me.sizePixelPic.y / 2)));
 
 		leftBot *= scaleFactor;
 
-        // Рисуем чанк
+        // Р РёСЃСѓРµРј С‡Р°РЅРє
         for (int i = 0; i < me.sizePixelPic.x * scaleFactor; i++) {
 			for (int j = 0; j < me.sizePixelPic.y * scaleFactor; j++) {
 				
@@ -396,13 +396,13 @@ public class Minimap : Singleton<Minimap>
 		}
 	}
 
-	// Очистить всю карту
+	// РћС‡РёСЃС‚РёС‚СЊ РІСЃСЋ РєР°СЂС‚Сѓ
 	public void ClearMap() {
 		texture.SetPixels(clean_colours_array);
 		Apply();
 	}
 
-	// Получаем цвет с учетом поворота чанка
+	// РџРѕР»СѓС‡Р°РµРј С†РІРµС‚ СЃ СѓС‡РµС‚РѕРј РїРѕРІРѕСЂРѕС‚Р° С‡Р°РЅРєР°
 	private Color GetPixelWithRotation(Texture2D texture, float angle, int x, int y) {
 
 		angle = Mathf.Round(angle);
@@ -431,12 +431,12 @@ public class Minimap : Singleton<Minimap>
 		return c;
 	}
 
-	// Применяем нарисованное к текстуре
+	// РџСЂРёРјРµРЅСЏРµРј РЅР°СЂРёСЃРѕРІР°РЅРЅРѕРµ Рє С‚РµРєСЃС‚СѓСЂРµ
 	private void Apply() {
 		texture.Apply();
 	}
 
-	// Если мы в туториале то карту не показываем
+	// Р•СЃР»Рё РјС‹ РІ С‚СѓС‚РѕСЂРёР°Р»Рµ С‚Рѕ РєР°СЂС‚Сѓ РЅРµ РїРѕРєР°Р·С‹РІР°РµРј
 	public void InTutorial(bool value) {
 		inTutor = value;
 		holder.gameObject.SetActive(!value);
