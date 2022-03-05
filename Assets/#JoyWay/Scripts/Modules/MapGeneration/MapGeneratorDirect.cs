@@ -122,18 +122,21 @@ public class MapGeneratorDirect : MapGenerator {
 		else
 			tempRoom = RoomSketchRandom(roomForGeneration, curIteratePoint % roomForGeneration.rooms.variants.Count);
 
-		if (tempRoom.trueWays.Count <= 0) {
-			Tuple<Vector2Int, Vector2Int> bestpair = GetShortestRoomEscape(tempRoom);
-			if (bestpair.Item1 == -Vector2Int.one) {
-				Debug.LogError($"No way from {tempRoom.p}");
-				return;
-			}
-			CountDaWay(bestpair.Item1, bestpair.Item2, curIteratePoint);
-			tempRoom.ApproveWay(bestpair.Item1);
-			RemoveOpenPoint(bestpair.Item2);
-		} else
-			for (int i = tempRoom.trueWays.Count - 1; i >= 0; --i)
-				RemoveOpenPoint(tempRoom.trueWays[i].offsetTo + tempRoom.p);
+		if (tempRoom != null)
+		{
+			if (tempRoom.trueWays.Count <= 0) {
+				Tuple<Vector2Int, Vector2Int> bestpair = GetShortestRoomEscape(tempRoom);
+				if (bestpair.Item1 == -Vector2Int.one) {
+					Debug.LogError($"No way from {tempRoom.p}");
+					return;
+				}
+				CountDaWay(bestpair.Item1, bestpair.Item2, curIteratePoint);
+				tempRoom.ApproveWay(bestpair.Item1);
+				RemoveOpenPoint(bestpair.Item2);
+			} else
+				for (int i = tempRoom.trueWays.Count - 1; i >= 0; --i)
+					RemoveOpenPoint(tempRoom.trueWays[i].offsetTo + tempRoom.p);	
+		}
 
 		++curIteratePoint;
 	}
